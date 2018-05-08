@@ -27,7 +27,7 @@ public class Order {
     private String updatedAt;
     @SerializedName("number")
     @Expose
-    private Integer number;
+    private Long number;
     @SerializedName("note")
     @Expose
     private Object note;
@@ -169,9 +169,27 @@ public class Order {
     @SerializedName("order_status_url")
     @Expose
     private String orderStatusUrl;
+    @SerializedName("shipping_lines")
+    @Expose
+    private List<Object> shippingLines = null;
     @SerializedName("line_items")
     @Expose
     private List<LineItem> lineItems = null;
+    @SerializedName("billing_address")
+    @Expose
+    private BillingAddress billingAddress;
+    @SerializedName("shipping_address")
+    @Expose
+    private ShippingAddress shippingAddress;
+    @SerializedName("fulfillments")
+    @Expose
+    private List<Object> fulfillments = null;
+    @SerializedName("refunds")
+    @Expose
+    private List<Object> refunds = null;
+    @SerializedName("customer")
+    @Expose
+    private Customer customer;
 
     public Long getId() {
         return id;
@@ -213,11 +231,11 @@ public class Order {
         this.updatedAt = updatedAt;
     }
 
-    public Integer getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 
@@ -603,6 +621,54 @@ public class Order {
 
     public void setLineItems(List<LineItem> lineItems) {
         this.lineItems = lineItems;
+    }
+
+    public List<Object> getShippingLines() {
+        return shippingLines;
+    }
+
+    public void setShippingLines(List<Object> shippingLines) {
+        this.shippingLines = shippingLines;
+    }
+
+    public BillingAddress getBillingAddress() {
+        return billingAddress;
+    }
+
+    public void setBillingAddress(BillingAddress billingAddress) {
+        this.billingAddress = billingAddress;
+    }
+
+    public ShippingAddress getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(ShippingAddress shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public List<Object> getFulfillments() {
+        return fulfillments;
+    }
+
+    public void setFulfillments(List<Object> fulfillments) {
+        this.fulfillments = fulfillments;
+    }
+
+    public List<Object> getRefunds() {
+        return refunds;
+    }
+
+    public void setRefunds(List<Object> refunds) {
+        this.refunds = refunds;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
 }
