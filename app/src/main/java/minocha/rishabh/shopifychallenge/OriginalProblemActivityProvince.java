@@ -22,7 +22,7 @@ public class OriginalProblemActivityProvince extends AppCompatActivity {
         Intent intent = getIntent();
         TextView sample = (TextView)findViewById(R.id.tvSample);
 
-        HashMap<String, Integer> hashMap = (HashMap<String, Integer>)intent.getSerializableExtra("map");
+        HashMap<String, Integer> hashMap = (HashMap<String, Integer>)intent.getSerializableExtra("provincemap");
         String data="";
         for (String key: hashMap.keySet()){
             data=data+"\n"+hashMap.get(key)+" number of orders in "+key;

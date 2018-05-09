@@ -5,7 +5,7 @@ package minocha.rishabh.shopifychallenge.Converters;
  */
 
 public class StampToYear {
-    public String getYear(String stamp){
-        return stamp.charAt(0)+stamp.charAt(1)+stamp.charAt(2)+stamp.charAt(3)+"";
+    public static String getYear(String stamp){
+        return ""+stamp.charAt(0)+stamp.charAt(1)+stamp.charAt(2)+stamp.charAt(3);
     }
 }

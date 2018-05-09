@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".OriginalProblemActivityProvince"/>
+        <activity android:name=".OriginalProblemActivityYear"/>
     </application>
 
 </manifest>
