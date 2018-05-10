@@ -1,7 +1,11 @@
 package minocha.rishabh.shopifychallenge;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Parcelable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Here, thisActivity is the current activity
+
         Toast.makeText(getApplicationContext(),"Getting data",Toast.LENGTH_LONG).show();
         Call<DataObject> call=client.getData("1","c32313df0d0ef512ca64d5b336a0d7c6");
         call.enqueue(new Callback<DataObject>() {
@@ -85,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i3=new Intent(MainActivity.this,ExtraOneActivity.class);
-                i3.putExtra("listOfOrders", (Serializable) extraOne);
-
+                i3.putExtra("listOfOrders", (Serializable) mList);
+                startActivity(i3);
             }
         });
     }
@@ -112,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             else
                 yearOrders.put(year, 1);
         }
-        for(int i = 0;i < size; i++)
-            extraOne.add(mList.get(i));
+       // for(int i = 0;i < size; i++)
+         //   extraOne.add(mList.get(i));
     }
 }

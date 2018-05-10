@@ -3,12 +3,14 @@ package minocha.rishabh.shopifychallenge.POJO;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by rkminoch on 08/05/18.
  */
 
 
-public class DefaultAddress {
+public class DefaultAddress  implements Serializable{
 
     @SerializedName("id")
     @Expose

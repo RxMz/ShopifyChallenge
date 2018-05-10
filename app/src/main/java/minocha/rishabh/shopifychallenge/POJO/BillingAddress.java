@@ -3,11 +3,13 @@ package minocha.rishabh.shopifychallenge.POJO;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by rkminoch on 08/05/18.
  */
 
-public class BillingAddress {
+public class BillingAddress  implements Serializable{
 
     @SerializedName("first_name")
     @Expose
