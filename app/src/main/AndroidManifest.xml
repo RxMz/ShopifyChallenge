@@ -21,6 +21,7 @@
         <activity android:name=".OriginalProblemActivityYear"/>
         <activity android:name=".ExtraOneActivity"/>
         <activity android:name=".ExtraTwoActivity"/>
+        <activity android:name=".OriginalProblem"/>
     </application>
 
 </manifest>

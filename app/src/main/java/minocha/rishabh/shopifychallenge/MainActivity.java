@@ -68,6 +68,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button checkSummary = (Button)findViewById(R.id.btnOrderSummary);
+        checkSummary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i0=new Intent(MainActivity.this,OriginalProblem.class);
+                i0.putExtra("provinceMap",provinceOrders);
+                i0.putExtra("yearMap",yearOrders);
+                startActivity(i0);
+            }
+        });
         Button checkProvinceSummary = (Button) findViewById(R.id.btnProvince);
         checkProvinceSummary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent i3=new Intent(MainActivity.this,ExtraOneActivity.class);
                 i3.putExtra("listOfOrders", (Serializable) mList);
                 startActivity(i3);
+            }
+        });
+        Button extraTwo = (Button)findViewById(R.id.btnExtra2);
+        extraTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Couldn't do this on time :(",Toast.LENGTH_LONG).show();
             }
         });
     }

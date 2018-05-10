@@ -22,25 +22,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
+        android:id="@+id/btnOrderSummary"
+        android:text="Order Summary"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
         android:id="@+id/btnProvince"
-        android:text="Sort by Province"
+        android:text="Order by Province Specific"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:id="@+id/btnYear"
-        android:text="Sort by Year"
+        android:text="Order by Year Specific"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:id="@+id/btnExtra1"
         android:text="Extra 1"
         />
@@ -48,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:id="@+id/btnExtra2"
         android:text="Extra 2"
         />
